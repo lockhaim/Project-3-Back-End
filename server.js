@@ -20,7 +20,7 @@ const recipesController = require('./controllers/recipes.js')
 app.use('/recipes', recipesController)
 
 app.get('/', (req, res) => {
-  res.send('hello world')
+  res.redirect('/recipes')
 })
 
 
