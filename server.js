@@ -20,7 +20,8 @@ app.use('/recipes', recipesController)
 console.log(MONGODB_URI);
 
 // Connect to Mongo
-mongoose.connect(MONGODB_URI  ,  { useNewUrlParser: true});
+mongoose.connect(MONGODB_URI , { useNewUrlParser: true}
+);
 
 // Error / success
 db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
