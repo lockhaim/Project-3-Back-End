@@ -4,6 +4,10 @@ const mongoose = require('mongoose')
 require('dotenv').config()
 const MONGODB_URI = process.env.MONGODB_URI
 const db = mongoose.connection;
+const cors = require('cors')
+
+app.use(express.json())
+app.use(cors())
 
 //___________________
 //Port
@@ -16,7 +20,7 @@ const recipesController = require('./controllers/recipes.js')
 app.use('/recipes', recipesController)
 
 app.get('/', (req, res) => {
-  res.send('hello world')
+  res.redirect('/recipes')
 })
 
 
