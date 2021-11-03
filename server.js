@@ -30,10 +30,14 @@ db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
 db.on('connected', () => console.log('mongo connected: ', MONGODB_URI));
 db.on('disconnected', () => console.log('mongo disconnected'));
 
+<<<<<<< HEAD
 app.get('/', (req, res) => {
     res.send('Hello World')
 })
 
 app.listen(3000, ()=>{
+=======
+app.listen(process.env.PORT, ()=>{
+>>>>>>> 70a02692ded910e0caadbd1dad70e3c028146c86
     console.log('listening...');
 });
