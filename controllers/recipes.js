@@ -21,6 +21,12 @@ router.delete('/:id', (req, res) => {
   })
 })
 
+router.put('/:id', (req, res) => {
+    Recipes.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedRecipe) => {
+        res.json(updatedRecipe)
+    })
+})
+
 
 
 module.exports = router;
