@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose')
 require('dotenv').config()
-const MONGODB_URI = process.env.MONGODB_URI
+const MONGODB_URI = process.env.Cluster0
 const db = mongoose.connection;
 const cors = require('cors')
 
