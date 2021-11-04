@@ -9,6 +9,7 @@ const cors = require('cors')
 app.use(express.json())
 app.use(cors())
 
+
 //___________________
 //Port
 //___________________
@@ -32,6 +33,11 @@ mongoose.connect(MONGODB_URI , { useNewUrlParser: true}
 db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
 db.on('connected', () => console.log('mongo connected: ', MONGODB_URI));
 db.on('disconnected', () => console.log('mongo disconnected'));
+
+app.get('/', (req, res) => {
+    res.send('Hello World')
+})
+
 
 app.listen(process.env.PORT, ()=>{
     console.log('listening...');
