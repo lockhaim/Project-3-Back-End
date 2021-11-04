@@ -15,4 +15,12 @@ router.post('/', (req, res) => {
   })
 })
 
+router.delete('/:id', (req, res) => {
+  Recipes.findByIdAndRemove(req.params.id, (err, deletedRecipe) => {
+    res.json(deletedRecipe)
+  })
+})
+
+
+
 module.exports = router;
