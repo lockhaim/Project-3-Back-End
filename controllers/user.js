@@ -4,7 +4,7 @@ const User = require('../models/user.js')
 const bcrypt = require('bcrypt')
 
 user.get('/', (req, res) => {
-  User.find({username}, (err, foundUsers) => {
+  User.find({}, (err, foundUsers) => {
     res.json(foundUsers)
   })
 })
