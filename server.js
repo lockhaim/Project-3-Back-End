@@ -5,9 +5,11 @@ require('dotenv').config()
 const MONGODB_URI = process.env.Cluster0
 const db = mongoose.connection;
 const cors = require('cors')
+const methodOverride = require('method-override')
 
 app.use(express.json())
 app.use(cors())
+app.use(methodOverride('_method'))
 
 
 //___________________
@@ -16,9 +18,15 @@ app.use(cors())
 // Allow use of Heroku's port or your own local port, depending on the environment
 const PORT = process.env.PORT || 3003;
 
-
+//////////////////
+//CONTROLLERS
 const recipesController = require('./controllers/recipes.js')
 app.use('/recipes', recipesController)
+
+const userController = require('./controllers/user.js')
+app.use('/', userController)
+//////////////////
+
 
 app.get('/', (req, res) => {
   res.redirect('/recipes')
