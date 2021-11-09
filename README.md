@@ -7,6 +7,7 @@ Kevin and I started off by deciding what we wanted to accomplish with out third 
 We started off creating the back end, and used a number of technologies similar to what we did in our unit 2 projects including:
 
 Express,
+BCrypt
 Mongoose,
 CORS,
 Axios,
@@ -23,7 +24,8 @@ DotENV is used to control the environmental variables so that we can accurately 
 
 Axios is used to make the required HTML methods (GET, PUT, POST, etc).
 
+BCrypt is used for user authentication to test encrypted password hashes against what is in the database without giving away the actual password info.
+
 Initially we struggled getting our backend to deploy correctly to Heroku because we had not set the environmental variables in Heroku. After setting up the variables correctly it was relatively straight forward to set up the back end with JSON create, read, update, and delete methods, and used POSTman to test the back end.
 
 It was really great working with Kevin on this project. I learned a lot from him about how to use POSTman to test the backend, and even more in the front end. It was good to watch how a peer of mine approached this set of problems and solved bugs.
- 
