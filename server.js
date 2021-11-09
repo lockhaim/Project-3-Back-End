@@ -24,7 +24,7 @@ const recipesController = require('./controllers/recipes.js')
 app.use('/recipes', recipesController)
 
 const userController = require('./controllers/user.js')
-app.use('/', userController)
+app.use('/user', userController)
 //////////////////
 
 
