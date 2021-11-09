@@ -27,11 +27,11 @@ user.put('/login', (req, res) => {
       res.json('Database error. Please try again')
     } else {
       if (!foundUser) {
-        res.json('<a href="/login">Username not found</a>')
+        res.json('Username not found')
       } else if (bcrypt.compareSync(req.body.password, foundUser.password)) {
         res.json({username: foundUser.username})
       } else {
-        res.json("<a href='/login'>Password not found</a>")
+        res.json("Password not found")
       }
     }
   })
